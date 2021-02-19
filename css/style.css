@@ -9,7 +9,10 @@ body {
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 div.contador {
@@ -26,19 +29,14 @@ div.contador {
 }
 
 div.contenedor {
-    /* height: 400px; */
-    width: 50%;
-    margin: 50px auto;
+    width: 90%;
+    margin: 70px auto;
     border: 1px solid white;
     border-radius: 10px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
     background: rgba(0, 0, 0, 0.8) ;
 }
 
-
+/* CAJA PREGUNTAS */
 div.cajaPreguntas {
     /* border: 1px solid white; */
     text-align: center;
@@ -46,7 +44,7 @@ div.cajaPreguntas {
     color: white;
 }
 
-
+/* CAJA RESPUESTAS */
 div.cajaRespuestas {
     /* border: 1px solid white; */
     padding: 15px;
@@ -89,3 +87,47 @@ div.cajaRespuestas {
         }
 
 
+/* BOTON REINICIO */
+
+div.btn {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 50%;
+    border: 1px solid white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+    div.btn:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        background-color: rgba(255, 255, 255, 0.7);
+        color: black;
+        border: 1px solid black;
+    }
+
+/* FOOTER */
+
+ /* footer.footer-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid white;
+    padding: 12px 0;
+    display: flex;
+    margin-top: 45px;
+    flex-direction: row;
+    
+}
+    
+       footer.footer-container  p, a {
+        color: #fff;
+        font-size: 15px;
+        text-decoration: none;
+        display: block;
+        margin: 0px 20px;
+        padding: 10px 0px;
+      }
+       footer.footer-container a:hover {
+        transform: scale(1.1);
+      } */

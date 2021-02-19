@@ -116,7 +116,11 @@ function evaluarRespuesta(respuesta, respuestaCorrecta, obj) {
 }
 
 
-// ----------------------------------------------
+let btnReinicio = document.querySelector(".btn");
+
+btnReinicio.addEventListener("click", () => window.location.reload());
+
+// ---------------------- TEMPORIZADOR ------------------------
 
 // window.onload = updateClock;
 
