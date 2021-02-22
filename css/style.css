@@ -5,11 +5,11 @@
 }
 
 body {
-    background-image: url(https://www.eluniversal.com.mx/sites/default/files/2020/04/02/hogwarts.jpg);
+    background-image:url("https://static.posters.cz/image/750/poster/harry-potter-hogwarts-boats-i74249.jpg") ;
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 18px;
+    font-family: 'Akaya Kanadaka', cursive;
+    font-size: 15px;
     display: flex;
     flex-direction: column;
     
@@ -19,9 +19,9 @@ div.contador {
     text-align: center;
     color: white;
     border: 1px white solid;
-    margin: 0px 30px;
+    margin: 20px auto;
     width: min-content;
-    padding: 15px;
+    padding: 18px;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     float: left;
@@ -30,7 +30,7 @@ div.contador {
 
 div.contenedor {
     width: 90%;
-    margin: 70px auto;
+    margin: 20px auto;
     border: 1px solid white;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.8) ;
@@ -98,7 +98,7 @@ div.btn {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    margin: 0 auto;
+    margin: 10PX auto;
 }
     div.btn:hover {
         cursor: pointer;
@@ -108,26 +108,50 @@ div.btn {
         border: 1px solid black;
     }
 
-/* FOOTER */
-
- /* footer.footer-container {
+a.btnInicio {
     background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-decoration: none;
+    width: 50%;
     border: 1px solid white;
-    padding: 12px 0;
-    display: flex;
-    margin-top: 45px;
-    flex-direction: row;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 10PX auto;
+}
+    a.btnInicio:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        background-color: rgba(255, 255, 255, 0.7);
+        color: black;
+        border: 1px solid black;
+    }
+
+/* MEDIA QUERYS */
+
+@media screen and (min-width: 600px) {
+    div.contenedor {
+        width: 80%;
+    }
+    div.btn, a.btnInicio {
+        max-width: 200px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    div.contenedor {
+        width: 70%;
+        max-width: 700px;
+    }
+
+    div.btn, a.btnInicio {
+        max-width: 200px;
+    }
+
+    div.cajaRespuestas {
+        max-width: 500px;
+        margin: 10px auto;
+    }
     
 }
-    
-       footer.footer-container  p, a {
-        color: #fff;
-        font-size: 15px;
-        text-decoration: none;
-        display: block;
-        margin: 0px 20px;
-        padding: 10px 0px;
-      }
-       footer.footer-container a:hover {
-        transform: scale(1.1);
-      } */
