@@ -50,13 +50,13 @@ const cuestionario = [
         respuestaCorrecta: 3
     },
     {
-        preguntas: "¡ENHORABUENA JOVEN MAGO! Has conseguido superar todas las preguntas, sin duda eres un verdadero orgullo para HOGWARTS" ,
-        respuestaCorrecta: 5,
-        respuestas: []
+        preguntas: "¡ENHORABUENA JOVEN MAGO! Has conseguido superar todas las preguntas, sin duda eres un verdadero orgullo para HOGWARTS. Es hora de que el sombrero seleccionador escoja tu casa." ,
+        respuestas: [""],
+        respuestaCorrecta: 5
     }
 ]
 
-let i = 0;
+let i = 9;
 
 // FUNCION PARA PINTAR LAS PREGUNTAS Y RESPUESTAS
 function pintarPregunta(posicion){
@@ -76,11 +76,23 @@ function pintarPregunta(posicion){
     cajaPreguntas.appendChild(preguntaPintada)
 
     const respuestaPintadaArray = respuestas.map( (respuestaActual, i) => {
-       let h3 = document.createElement("h3")
-       h3.innerText = respuestaActual 
-       h3.setAttribute("class", "color"+i)
-       cajaRespuestas.appendChild(h3)
-       h3.addEventListener("click", () => evaluarRespuesta(i, respuestaCorrecta, h3))
+        if (respuestas.length > 1) {
+            let h3 = document.createElement("h3")
+            h3.innerText = respuestaActual 
+            h3.setAttribute("class", "color"+i)
+            cajaRespuestas.appendChild(h3)
+            h3.addEventListener("click", () => evaluarRespuesta(i, respuestaCorrecta, h3))
+        } else {
+            let imgFinal = document.createElement("img")
+            imgFinal.setAttribute("src", "https://media.giphy.com/media/PXvCWUnmqVdks/giphy.gif")
+            imgFinal.setAttribute("class", "imgFinal")
+            cajaRespuestas.appendChild(imgFinal)
+
+            let span = document.querySelector("#countdown")
+            span.removeAttribute("id", "#countdown")
+            let pSpan = document.querySelector("p")
+            pSpan.innerText += " SOBRANTES"
+        }
     })
     
 
@@ -93,50 +105,48 @@ pintarPregunta(i)
 // FUNCION PARA EVALUAR LAS RESPUESATAS
 function evaluarRespuesta(respuesta, respuestaCorrecta, obj) {
     const h3 = obj;
-    
-        if (respuesta == respuestaCorrecta) {
-            h3.classList.add("right")
-            
-            setTimeout( function(){
-                let caja1 = document.querySelector(".cajaPreguntas")
-                let caja2 = document.querySelector(".cajaRespuestas")
-                caja1.remove()
-                caja2.remove()
-                caja2.classList.remove("cajaRespuestas")
-                pintarPregunta(++i)}, 700)
-                
-            } else {
-                h3.classList.add("wrong")
-                
-                setTimeout( function(){
-                    let wrong = document.querySelector(".wrong")
-                    wrong.classList.remove("wrong")
-                }, 700)
-                
-                
-            }
-        }
+
+    if (respuesta == respuestaCorrecta) {
+        h3.classList.add("right")
+        
+        setTimeout( function(){
+            let caja1 = document.querySelector(".cajaPreguntas")
+            let caja2 = document.querySelector(".cajaRespuestas")
+            caja1.remove()
+            caja2.remove()
+            caja2.classList.remove("cajaRespuestas")
+            pintarPregunta(++i)}, 700)
+    } else {
+        h3.classList.add("wrong")
+        
+        setTimeout( function(){
+            let wrong = document.querySelector(".wrong")
+            wrong.classList.remove("wrong")
+        }, 700)
+    }
+
+}
+
         
         
 let btnReinicio = document.querySelector(".btn");
         
 btnReinicio.addEventListener("click", () => window.location.reload());
         
-        // ---------------------- TEMPORIZADOR ------------------------
-        
+// ---------------------- TEMPORIZADOR ------------------------
 window.onload = updateClock;
 
 var totalTime = 60;
 
 function updateClock() {
   document.getElementById('countdown').innerHTML = totalTime;
-  if(totalTime==0){
 
+  if (totalTime==0) {
     window.alert("OH, VAYA..., SE TE HA AGOTADO EL TIEMPO ¡TENDRÁS QUE SER MÁS RAPIDO LA PROXIMA VEZ!")
     setTimeout(function(){
         window.location.reload();
     }, 1000)
-  }else{
+  } else {
     totalTime-=1;
     setTimeout("updateClock()",1000);
   }

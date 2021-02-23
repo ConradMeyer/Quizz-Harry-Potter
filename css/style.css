@@ -11,8 +11,7 @@ body {
     font-family: 'Akaya Kanadaka', cursive;
     font-size: 15px;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;  
 }
 
 div.contador {
@@ -25,7 +24,6 @@ div.contador {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     float: left;
-
 }
 
 div.contenedor {
@@ -86,8 +84,11 @@ div.cajaRespuestas {
             /* background-color: green; */
         }
 
-
-/* BOTON REINICIO */
+.imgFinal {
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 20px;
+}
 
 div.btn {
     background-color: rgba(0, 0, 0, 0.8);
