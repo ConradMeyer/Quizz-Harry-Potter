@@ -58,6 +58,11 @@ const cuestionario = [
 
 let i = 0;
 
+function desorden(array) {
+    array.sort( () => Math.random() - 0.5);
+}
+desorden(cuestionario);
+
 // FUNCION PARA PINTAR LAS PREGUNTAS Y RESPUESTAS
 function pintarPregunta(posicion){
     const objeto = cuestionario[posicion];
