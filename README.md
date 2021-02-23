@@ -6,6 +6,5 @@ Juego de respuestas tipo Quizz con tematica de Harry Potter
 
 TO DO:
  - Responsive (direction row con pantalla grande?)
- - Retocar el CSS.
- - Final de partida. (puntuación?)
+ - Retocar el CSS
  - Respuestas aleatorias

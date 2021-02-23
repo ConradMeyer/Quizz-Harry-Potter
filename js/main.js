@@ -56,7 +56,7 @@ const cuestionario = [
     }
 ]
 
-let i = 9;
+let i = 0;
 
 // FUNCION PARA PINTAR LAS PREGUNTAS Y RESPUESTAS
 function pintarPregunta(posicion){
