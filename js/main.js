@@ -131,8 +131,7 @@ function evaluarRespuesta(respuesta, respuestaCorrecta, obj) {
     }
 
 }
-
-        
+      
         
 let btnReinicio = document.querySelector(".btn");
         
