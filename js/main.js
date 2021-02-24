@@ -58,6 +58,7 @@ const cuestionario = [
 
 let i = 0;
 
+// PREGUNTAS ALEATORIAS
 function desorden(array) {
     array.sort( () => Math.random() - 0.5);
 }
@@ -132,7 +133,7 @@ function evaluarRespuesta(respuesta, respuestaCorrecta, obj) {
 
 }
       
-        
+// BOTON DE REINICIO
 let btnReinicio = document.querySelector(".btn");
         
 btnReinicio.addEventListener("click", () => window.location.reload());
